@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { Button, Card, Icon, Avatar, Rating } from 'react-native-elements';
+import { locationCreate } from '../actions';
 
 import { PRIMARY_COLOR, SECONDARY_COLOR, BUTTON_COLOR } from '../constants/style';
 
 class CoffeePotList extends Component {
+    //Tester to input locations
+    onButtonPress() {
+        const { name='Mantra', location='Azusa, CA' } = this.props;
+        this.props.locationCreate({ name, location });
+      }
+
     static navigationOptions = ({navigation}) => ({
         title: 'Coffee Pots',
         //Changes the color of the header
@@ -47,6 +54,7 @@ class CoffeePotList extends Component {
                             title='Place Order'
                             buttonStyle={styles.button_style}
                             rounded
+                            onPress={this.onButtonPress.bind(this)}
                         />
                         <Button 
                             iconRight={{

@@ -26,7 +26,7 @@ export default class PlaceOrder extends Component {
                 <ScrollView>
                     <Card>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text>FirstName LastName</Text>
+                            <Text>{this.props.firstName} {this.props.lastName}</Text>
                         </View>
                     </Card>
                     <Card>
