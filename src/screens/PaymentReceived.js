@@ -33,7 +33,6 @@ export default class PaymentRecieved extends Component {
                             <Text>Location: Starbucks, Azusa</Text>
                         </View>
                     </Card>
-                    <Card>
                         <View style={{ flexDirection: 'column' }}>
                             <Text style ={styles.title_style}>Order:{"\n"}</Text>
                             <Text>Grande, Iced, Vanilla {"\n"} Caffe Latte{"\n"}</Text>
@@ -47,7 +46,6 @@ export default class PaymentRecieved extends Component {
                                 />
                             </View>
                         </View>
-                    </Card>
                     <Card>
                         <View style={styles.button_container}>
                         <Button 

@@ -110,7 +110,7 @@ export const signupUser = (email, password, passwordRetype) => async dispatch =>
       case 'auth/email-already-in-use':
         return loginUserFail(
           dispatch,
-          `${email} already in use - Please try anothere-mail address or log in with a social media provider`
+          `${email} already in use - Please try another e-mail address or log in with a social media provider`
         );
       case 'auth/invalid-email':
         return loginUserFail(
