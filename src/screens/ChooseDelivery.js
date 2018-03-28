@@ -29,7 +29,29 @@ class ChooseDelivery extends Component {
                 />
             </TouchableOpacity>
         )
-    })
+    });
+
+    state={ hasCoffeePot: false }
+
+    renderPickLocationBttn() {
+        const { navigate } = this.props.navigation;
+        if(hasCoffeePot === true){
+            <Button 
+                buttonStyle={styles.bttn_style}
+                title='Pick Location'
+                rounded
+                onPress={() => Alert.alert('You Already Have A Coffee Pot!')}
+            />
+        }
+        return (
+            <Button 
+                buttonStyle={styles.bttn_style}
+                title='Pick Location'
+                rounded
+                onPress={() => navigate('PickedLocationList')}
+            />
+        )
+    }
 
     render() {
         const { navigate } = this.props.navigation;
